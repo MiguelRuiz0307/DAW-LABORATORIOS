@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio No. 26 - Tema: JS promise, Async y await</title>
+    <style>
+        #contenedor {
+            text-align: center;
+        }
+
+        #imagen {
+            width: 450px;
+            height: 400px;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Obras de Arte</h1>
+
+    <div id="contenedor" style="text-align: center;">
+        <img id="imagen" style="max-width: 80%; max-height: 80%;" />
+        <p id="nombre"></p>
+    </div>
+
+    <script>
+        // Arreglo bidimensional con las imágenes y sus nombres
+        const obrasDeArte = [
+            ["imagenes/la-gioconda.jfif", "La gioconda"],
+            ["imagenes/la-persistencia-de-la-memoria.jpg", "La persistencia de la memoria"],
+            ["imagenes/la-ronda-de-noche.jpg", "La ronda de noche"],
+            ["imagenes/las-meninas.jpg", "Las meninas"],
+        ];
+
+        // Función para mostrar una obra de arte aleatoria
+        function mostrarObraDeArte() {
+            // Generar un índice aleatorio
+            const indice = Math.floor(Math.random() * obrasDeArte.length);
+
+            // Obtener la imagen y el nombre de la obra de arte utilizando el índice
+            const [imagen, nombre] = obrasDeArte[indice];
+
+            // Mostrar la imagen y el nombre en la página web
+            document.getElementById("imagen").src = imagen;
+            document.getElementById("imagen").alt = nombre; 
+            document.getElementById("nombre").textContent = nombre;
+        }
+
+        // Función asincrónica para cambiar la obra de arte cada 3000 milisegundos
+        async function cambiarObraDeArte() {
+            while (true) {
+                mostrarObraDeArte();
+                await new Promise(resolve => setTimeout(resolve, 3000));
+            }
+        }
+
+        // Iniciar la aplicación llamando a la función cambiarObraDeArte
+        cambiarObraDeArte();
+    </script>
+</body>
+
+</html>

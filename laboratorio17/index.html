@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio No.17 - Uso de clases en JavaScript</title>
+    <script>
+        class Alumno{
+            constructor(matricula, nombre, apellidos){
+            this.matricula = matricula;
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            }//fin del constructor
+
+            obtenerNombreCompleto(){
+                return this.nombre + " " + this.apellidos;
+            }//fin del metodo
+
+        }//fin de la clase
+
+    </script>
+</head>
+<body>
+    <script>
+        //creamos un objeto de tipo alumno
+        const alumno = new Alumno("42100899", "Juan Antonio", "Carillo");
+
+        console.log(alumno.obtenerNombreCompleto());
+    </script>
+</body>
+</html>

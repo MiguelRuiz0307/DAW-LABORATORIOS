@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio No.20 - Primer ejemplo utilizando JSON</title>
+</head>
+<body>
+    <div class="container ">
+        <h1>Laboratorio No. 20 - Datos recibidos en formato JSON</h1>
+    </div>
+
+    <div class="container ">
+        <p id="demo">
+
+        </p>
+    </div>
+
+    <script>
+        //datos recibidos desde el servidor en una cadena JSON
+        const empleado =  '{"numemp":"42100899", "nombre":"Juan Antonio", "edad":20}';
+
+        //covertir la cadena a un objeto JSON
+        const myObj = JSON.parse(empleado);
+
+        document.getElementById("demo").innerHTML = myObj.numemp + " " + myObj.nombre + " "+ myObj.edad;
+    </script>
+</body>
+</html>

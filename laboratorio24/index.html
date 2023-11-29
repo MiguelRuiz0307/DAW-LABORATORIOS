@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio No. 24 - Uso de CallBacks con JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Laboratorio No. 24</h1>
+        <p>Realiza una aplicacion con JavaScript que haga uso de callbacks que te permita obtener
+             todos los numeros pares de un arreglo dado. <br><br>
+
+             Almacena en un nuevo arreglo todos los numero que sean pares. <br><br>
+
+            Imprime el resultado correspopndiente <br><br>
+
+            Puntos: 10 participaciones 
+        </p>
+
+        <p id="demo1"></p>
+        <p id="demo"></p>
+
+    </div>
+
+    <script>
+        // Create an Array
+        const myNumbers = [4, 2, 20, -7, 5, 9, 6];
+        
+        // Call removeNeg with a Callback
+        const evenNumbers = removeImp(myNumbers, (x) => x % 2 == 0);
+        
+        // Display Result
+        document.getElementById("demo1").innerHTML = "Numeros en el primer arreglo:" + myNumbers;
+        document.getElementById("demo").innerHTML = "Numeros en el segundo arreglo:" + evenNumbers;
+        
+        // Remove negative numbers
+        function removeImp(numbers, callback) {
+          const myArray = [];
+          for (const x of numbers) {
+            if (callback(x)) {
+              myArray.push(x);
+            }
+          }
+          return myArray;
+        }//fin de la funcion 
+
+    </script>
+</body>
+</html>

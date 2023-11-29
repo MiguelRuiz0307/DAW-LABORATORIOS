@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1 style="text-align: center;">JavaScript Functions</h1>
+    <h2 style="text-align: center;">setInterval() with a Callback</h2>
+
+    <p style="text-align: center;">Utiliza 50 milisegundos para cambiar entre imágenes</p>
+
+    <img id="imagen" src="imagen" style="display: block; margin: 0 auto;"/>
+
+    <script>
+
+        let i = 0;
+
+        setInterval(myFunction, 50);
+        
+            function myFunction() {
+
+            document.getElementById("imagen").src = "imagenes/galope" + i + ".PNG";
+            i++;
+
+            if(i > 15){
+                i=0;
+            }
+            
+        }
+
+    </script>
+
+</body>
+</html>
