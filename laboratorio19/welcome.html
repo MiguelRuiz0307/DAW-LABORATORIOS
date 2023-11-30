@@ -2,45 +2,40 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
 
-    <title>Banorte</title>
-    
-
+  <title>Banorte</title>
 </head>
 
 <body>
-   
-    <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <h1 class="text-center">BANORTE</h1>
-              <div class="form-group">
-                <label for="nip" class="form-label">Cambiamos contigo</label>
-                <select class="form-control" id="operacion">
-                <option value="operacion">Selecciona tu operacion</option>
-                <option value="ver_saldo">Ver Saldo</option>
-                <option value="depositar">Depositar</option>
-                <option value="retirar">Retirar</option>
-                <option value="salir">Salir</option>
-                <input type="transaccion" class="form-control" id="transaccion">
-                <button type="submit" class="btn btn-primary">Aceptar</button>
-                </select>
-              </div>
-              
-            </form>
-          </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1 class="text-center">BANORTE</h1>
+        <div class="form-group">
+          <label for="nip" class="form-label">Cambiamos contigo</label>
+          <select class="form-control" id="operacion">
+            <option value="operacion">Selecciona tu operacion</option>
+            <option value="ver_saldo">Ver Saldo</option>
+            <option value="depositar">Depositar</option>
+            <option value="retirar">Retirar</option>
+            <option value="salir">Salir</option>
+          </select>
+          <input type="transaccion" class="form-control" id="transaccion">
+          <button type="button" class="btn btn-primary" onclick="realizarOperacion()">Aceptar</button>
         </div>
+        <div id="mensajeTransaccion"></div>
       </div>
+    </div>
+  </div>
 
-    <script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>
